@@ -24,6 +24,7 @@ public class Reddle {
         max = (number - 1) > min ? number - 1 : number;
       } else if (response.equals("yes")) {
         System.out.println("Nice Game Won :)");
+        scanner.close();
         System.exit(0);
       } else {
         System.out.println("Unknown answer");

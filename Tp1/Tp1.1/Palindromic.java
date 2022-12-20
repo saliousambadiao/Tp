@@ -17,11 +17,16 @@ public class Palindromic {
     try (Scanner scanner = new Scanner(System.in)) {
       String word = scanner.next();
       boolean response1 = palindromic(word);
-      if (response1) {
-        System.out.println(" Yes " + word + " is a palindromic");
-      } else {
-        System.out.println(" No " + word + " is not a palindromic");
-      }
+      String res = (response1 == true)
+        ? ("YES " + word + " is a palindromic")
+        : ("NO " + word + " is not a palindromic");
+      System.out.println(res);
+      /* An alternative is to use the following lines with the classic if condition */
+      // if (response1) {
+      //   System.out.println(" Yes " + word + " is a palindromic");
+      // } else {
+      //   System.out.println(" No " + word + " is not a palindromic");
+      // }
     }
   }
 }

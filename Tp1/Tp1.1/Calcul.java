@@ -9,6 +9,9 @@ public class Calcul {
   }
 
   public static double Produit(int[] t) {
+    if (t.length == 0) {
+      return 0;
+    }
     double produit = 1;
     for (int i = 0; i < t.length; i++) {
       produit *= t[i];
@@ -18,12 +21,17 @@ public class Calcul {
 
   public static double Moyenne(int[] t) {
     double moyenne = 0;
-    moyenne = Somme(t) / t.length;
+    if (t.length != 0) {
+      moyenne = Somme(t) / t.length;
+    } else {
+      System.out.println("Divion par zero impossible !!");
+    }
     return moyenne;
   }
 
   public static void main(String[] args) {
     int[] tab = { 1, 23, 12, -4, 6, 89, 2 };
+    //int[] tab = {};
     int sum = Somme(tab);
     double prod = Produit(tab);
     double moy = Moyenne(tab);
